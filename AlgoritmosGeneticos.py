@@ -2,18 +2,14 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 
-
 individuos=10
 N=individuos
 bits = 10
-
-
 X = np.zeros([N,bits])
 
 for i in range(N):
   for j in range (bits):
     X[i,j]=random.randint(0,1)
-
 
 numDec  = np.zeros(N)
 T = 0
@@ -49,10 +45,6 @@ for b in range(N):
 
 print('VecPadreRuleta ',padreGana1 )
 
-
-
-
-
 padreGana = np.zeros(N)
 
 for i in range(N):
@@ -71,11 +63,8 @@ for i in range(N):
      padreGana[i] = padre_1
   print('PadreTorneo = ',padreGana[i])
 
-
 print('VecPadreTorneo: ', padreGana)
 print('VecPadreRuleta: ', padreGana1)
-
-
 
 frecc = {}
 frecc2 = {}
@@ -93,13 +82,10 @@ for n in padreGana1:
 
 print('FrecuanciaPorTorneo',frecc)
 print('FrecuenciaPorRuleta',frecc2)
-
 equals = np.zeros(N)
 i = 0
 for g in padreGana:
   if g in padreGana1:
     equals[i] = g
     i +=1
-
-
 print(equals)
